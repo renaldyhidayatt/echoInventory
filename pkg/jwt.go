@@ -22,7 +22,7 @@ func Sign(schemajwt *schemas.SchemaJWT) (string, error) {
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 
-	jwt, err := token.SignedString([]byte(GodotEnv("JWT_SECRET")))
+	jwt, err := token.SignedString([]byte("secret"))
 
 	return jwt, err
 }

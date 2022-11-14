@@ -2,6 +2,7 @@ package routes
 
 import (
 	"echoinventory/handler"
+	"echoinventory/middleware"
 	"echoinventory/repository"
 	"echoinventory/services"
 	"net/http"
@@ -70,6 +71,8 @@ func NewRoute(db *gorm.DB, router *echo.Echo) {
 
 	routerAuth.POST("/login", handlerAuth.HandlerLogin)
 	routerAuth.POST("/register", handlerAuth.HandlerRegister)
+
+	middleware.WebSecurityConfig(router)
 
 	routerCategory.GET("/hello", handlerCategory.HandlerHello)
 	routerCategory.POST("/create", handlerCategory.HandlerCreate)

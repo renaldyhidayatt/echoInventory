@@ -8,8 +8,8 @@ import (
 )
 
 var whiteListPaths = []string{
-	"/api/login",
-	"/api/register",
+	"/api/auth/login",
+	"/api/auth/register",
 }
 
 func init() {

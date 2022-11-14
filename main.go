@@ -2,7 +2,6 @@ package main
 
 import (
 	"echoinventory/config"
-	"echoinventory/middleware"
 	"echoinventory/routes"
 	"net/http"
 
@@ -17,8 +16,6 @@ func main() {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
-
-	middleware.WebSecurityConfig(e)
 
 	routes.NewRoute(db, e)
 
