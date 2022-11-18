@@ -2,6 +2,7 @@ package repository
 
 import (
 	"echoinventory/models"
+	"echoinventory/pkg"
 	"echoinventory/schemas"
 
 	"gorm.io/gorm"
@@ -50,6 +51,12 @@ func (r *repositoryAuth) EntityLogin(input *schemas.SchemaUser) (*models.ModelUs
 	checkEmailExist := db.Debug().First(&user, "email=?", input.Email)
 
 	if checkEmailExist.RowsAffected < 1 {
+		return &user, nil
+	}
+
+	checkPasswordMatch := pkg.ComparePassword(user.Password, input.Password)
+
+	if checkPasswordMatch != nil {
 		return &user, nil
 	}
 
