@@ -3,6 +3,7 @@ package repository
 import (
 	"echoinventory/models"
 	"echoinventory/schemas"
+	"errors"
 
 	"gorm.io/gorm"
 )
@@ -22,10 +23,10 @@ func (r *repositoryCategory) EntityResults() (*[]models.ModelCategory, error) {
 
 	db := r.db.Model(&category)
 
-	checkUser := db.Debug().Find(&category)
+	checkCategory := db.Debug().Find(&category)
 
-	if checkUser.RowsAffected < 1 {
-		return &category, checkUser.Error
+	if checkCategory.RowsAffected < 1 {
+		return &category, errors.New("error category")
 	}
 
 	return &category, nil

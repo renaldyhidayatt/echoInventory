@@ -21,7 +21,8 @@ func DatabaseConnect() *gorm.DB {
 		return nil
 	}
 
-	err = db.AutoMigrate(&models.ModelCategory{}, &models.ModelUser{}, &models.ModelSupplier{}, &models.ModelCustomer{})
+	err = db.AutoMigrate(&models.ModelCategory{}, &models.ModelUser{}, &models.ModelSupplier{}, &models.ModelCustomer{}, &models.ModelProduct{}, &models.ModelProductKeluar{}, &models.ModelProductMasuk{})
+
 	if err != nil {
 		defer logger.Info("Database connection failed")
 		logger.Fatal(err)

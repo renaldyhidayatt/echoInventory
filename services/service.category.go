@@ -4,6 +4,7 @@ import (
 	"echoinventory/entity"
 	"echoinventory/models"
 	"echoinventory/schemas"
+	"fmt"
 )
 
 type serviceCategory struct {
@@ -28,6 +29,10 @@ func (s *serviceCategory) EntityCreate(input *schemas.SchemaCategory) (*models.M
 
 func (s *serviceCategory) EntityResults() (*[]models.ModelCategory, error) {
 	res, err := s.category.EntityResults()
+
+	if err != nil {
+		return nil, fmt.Errorf("failed error %w", err)
+	}
 
 	return res, err
 }

@@ -28,14 +28,14 @@ func (r *repositoryAuth) EntityRegister(input *schemas.SchemaUser) (*models.Mode
 
 	checkEmailExist := db.Debug().First(&user, "email=?", input.Email)
 
-	if checkEmailExist.RowsAffected > 0 {
-		return &models.ModelUser{}, nil
+	if checkEmailExist.RowsAffected > 1 {
+		return nil, checkEmailExist.Error
 	}
 
 	addUser := db.Debug().Create(&user).Commit()
 
 	if addUser.RowsAffected < 1 {
-		return &user, nil
+		return nil, addUser.Error
 	}
 
 	return &user, nil
@@ -50,7 +50,7 @@ func (r *repositoryAuth) EntityLogin(input *schemas.SchemaUser) (*models.ModelUs
 
 	checkEmailExist := db.Debug().First(&user, "email=?", input.Email)
 
-	if checkEmailExist.RowsAffected < 1 {
+	if checkEmailExist.RowsAffected > 1 {
 		return &user, nil
 	}
 
