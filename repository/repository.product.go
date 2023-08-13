@@ -22,7 +22,7 @@ func (r *repositoryProduct) EntityResults() (*[]models.ModelProduct, error) {
 
 	db := r.db.Model(&product)
 
-	checkProduct := db.Debug().Find(&product)
+	checkProduct := db.Debug().Preload("Category").Find(&product)
 
 	if checkProduct.RowsAffected < 1 {
 		return &product, checkProduct.Error

@@ -1,0 +1,238 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "inventorygrpc",
+    "dateExported": "2023-08-13T19:56:35.304Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "d6c3572a-d6ac-4e06-83ad-a1ecbdcf159d",
+            "name": "auth",
+            "containerId": "",
+            "created": "2023-08-08T19:31:39.820Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "9ce3d9df-d99f-4a3a-83c7-e1c124695d44",
+            "name": "category",
+            "containerId": "",
+            "created": "2023-08-09T14:00:59.862Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "033e9fe9-59a3-4a13-b85f-b8b2980c8411",
+            "name": "product",
+            "containerId": "",
+            "created": "2023-08-09T14:31:16.268Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "44f88d52-f199-4693-87e1-188b008ce429",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-08-09T14:41:41.298Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "6bf97558-92d7-46fa-8ecb-1e88b2053ba7",
+            "name": "productkeluar",
+            "containerId": "",
+            "created": "2023-08-09T15:35:41.816Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "83f801e1-51a9-46f5-92d0-f23cf7787b21",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "d6c3572a-d6ac-4e06-83ad-a1ecbdcf159d",
+            "name": "hello",
+            "url": "localhost:5000/api/auth/hello",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-08-08T19:31:44.292Z",
+            "modified": "2023-08-08T19:32:05.640Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "517e1314-0bfe-4914-96e2-9db1f68428c1",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "d6c3572a-d6ac-4e06-83ad-a1ecbdcf159d",
+            "name": "SignUp",
+            "url": "localhost:5000/api/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-08-08T19:32:15.309Z",
+            "modified": "2023-08-09T14:56:04.762Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\": \"dota\",\n  \"last_name\": \"kentang\",\n  \"email\": \"dragonntt@gmail.com\",\n  \"password\": \"dota12333\",\n  \"role\": \"admin\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6e2c2383-0cdf-4e9a-b103-0718a0cadce9",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "d6c3572a-d6ac-4e06-83ad-a1ecbdcf159d",
+            "name": "SignIn",
+            "url": "localhost:5000/api/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-08-09T13:54:12.578Z",
+            "modified": "2023-08-09T13:55:35.197Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"dragonnest@gmail.com\",\n  \"password\": \"dota12333\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "24ceaae5-f818-43ef-8ff8-124c5260ad48",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "9ce3d9df-d99f-4a3a-83c7-e1c124695d44",
+            "name": "hello",
+            "url": "localhost:5000/api/category/hello",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-08-09T14:01:05.035Z",
+            "modified": "2023-08-09T14:01:57.246Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ecedc58c-9668-4641-a5e8-60c74d663b67",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "9ce3d9df-d99f-4a3a-83c7-e1c124695d44",
+            "name": "create",
+            "url": "localhost:5000/api/category/create",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-08-09T14:02:01.346Z",
+            "modified": "2023-08-09T14:02:27.040Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"dota\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "793e3369-59a0-4391-8dec-d719817249eb",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "9ce3d9df-d99f-4a3a-83c7-e1c124695d44",
+            "name": "getall",
+            "url": "localhost:5000/api/category/",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-08-09T14:04:43.147Z",
+            "modified": "2023-08-09T14:32:37.198Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "61f8eed4-ecb3-4c92-b09d-405b8e7deb48",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "033e9fe9-59a3-4a13-b85f-b8b2980c8411",
+            "name": "findall",
+            "url": "localhost:5000/api/product/",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-08-09T14:31:22.599Z",
+            "modified": "2023-08-09T14:31:29.801Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "04762e04-367d-4d4f-905b-e6264419e507",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "033e9fe9-59a3-4a13-b85f-b8b2980c8411",
+            "name": "create",
+            "url": "localhost:5000/api/product/create",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-08-09T14:31:39.922Z",
+            "modified": "2023-08-09T14:32:55.982Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"ikang\",\n  \"image\": \"dota\",\n  \"qty\": \"1\",\n  \"category_id\": \"923cb45d-59e4-4db9-be60-bd9e16e4f8d0\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0c993e90-105f-42e9-ad98-3bd6ed6ecb3f",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "44f88d52-f199-4693-87e1-188b008ce429",
+            "name": "findall",
+            "url": "localhost:5000/api/user/",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-08-09T14:41:48.243Z",
+            "modified": "2023-08-09T14:44:11.872Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ead20b0e-4feb-4ecc-be0c-259d59e88be6",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "6bf97558-92d7-46fa-8ecb-1e88b2053ba7",
+            "name": "findall",
+            "url": "localhost:5000/api/productkeluar/",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-08-09T15:35:50.581Z",
+            "modified": "2023-08-09T16:18:30.137Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "04b77abc-9deb-4025-ab61-46c4150ba81f",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "6bf97558-92d7-46fa-8ecb-1e88b2053ba7",
+            "name": "create",
+            "url": "localhost:5000/api/productkeluar/create",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2023-08-09T15:36:53.364Z",
+            "modified": "2023-08-09T15:38:20.082Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qty\": \"1\",\n  \"product_id\": \"196381b7-2e85-4fe3-b8a5-356e995f535f\",\n  \"category_id\": \"923cb45d-59e4-4db9-be60-bd9e16e4f8d0\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6ca1daf-70dd-4ab4-a833-29711642e40f",
+            "colId": "9801ba55-0891-48e2-9418-3149dfa175b4",
+            "containerId": "6bf97558-92d7-46fa-8ecb-1e88b2053ba7",
+            "name": "findid",
+            "url": "localhost:5000/api/productkeluar/bb3ed648-97ec-4393-870d-f4be8019d777",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-08-09T15:43:18.265Z",
+            "modified": "2023-08-09T15:43:25.328Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

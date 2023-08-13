@@ -61,11 +61,13 @@ func (p *ProductHandlerGrpc) GetProducts(ctx context.Context, req *pb.ProductsRe
 
 	for _, product := range *products {
 		pbProduct := &pb.Product{
-			Id:         product.ID,
-			Name:       product.Name,
-			Image:      product.Image,
-			Qty:        product.Qty,
-			CategoryId: product.CategoryID,
+			Id:    product.ID,
+			Name:  product.Name,
+			Image: product.Image,
+			Qty:   product.Qty,
+			Category: &pb.Category{
+				Name: product.Category.Name,
+			},
 		}
 		pbProducts = append(pbProducts, pbProduct)
 	}

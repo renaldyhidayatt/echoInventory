@@ -12,3 +12,5 @@ type EntityUsers interface {
 	EntityUpdate(input *schemas.SchemaUser) (*models.ModelUser, error)
 	EntityDelete(input *schemas.SchemaUser) (*models.ModelUser, error)
 }
+
+
